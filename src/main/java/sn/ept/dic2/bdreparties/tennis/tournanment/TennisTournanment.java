@@ -19,7 +19,7 @@ public class TennisTournanment {
         
         System.out.println("*******************Fonction maxPrime***********************\n \n");
         
-        joueur.maxPrime();
+        //joueur.maxPrime();
         
         //System.out.println("*******************Fonction maxPrime2***********************/n");
         
@@ -29,7 +29,15 @@ public class TennisTournanment {
         
         String selectQuery = "SELECT * from Joueur WHERE AnNaiss = 1972";
         
-        joueur.genericRequest(selectQuery);
+        //joueur.genericRequest(selectQuery);
+        
+        System.out.println("******Compléter le programme pour afficher en en-tête le nom des attributs du résultat*******\n");
+        
+        String selectQueryComplete = "SELECT * from Joueur WHERE AnNaiss = 1972";
+        
+        joueur.genericRequestComplete(selectQueryComplete);
+        
+        
        
 
     }
