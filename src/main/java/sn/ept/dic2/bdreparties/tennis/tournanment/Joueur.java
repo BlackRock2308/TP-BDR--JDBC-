@@ -23,6 +23,12 @@ public class Joueur {
     static String database = "base_tennis";
     static String user = "root";
     static String password = "Lifeisqgift#)";
+    
+    static String server2 = "localhost";
+    static String port2 = "5432";
+    static String database2 = "tennis_db2";
+    static String user2 = "postgres";
+    static String password2 = "password";
     static String requete = "select LIEUTOURNOI,ANNEE from Gain";
 
     Connection connexion = null;
@@ -116,42 +122,7 @@ public class Joueur {
         }
     }
 
-    public void genericRequest(String selectQuery) {
-        loadDatabase();
-        selectQuery = selectQuery.toUpperCase();
-        if (!selectQuery.startsWith("SELECT")) {
-            throw new IllegalArgumentException("This method only accepts SELECT queries. You tried: " + selectQuery);
-        }
-        try {
-            //étape 3: créer l'objet statement
-            PreparedStatement preparedStatement = connexion.prepareStatement(selectQuery);
-            resultat = preparedStatement.executeQuery();
-            //étape 4: exécuter la requête
-            while (resultat.next()) {
-                String tuple = "( " + resultat.getString(1) + " ,"
-                        + resultat.getString(2) + ")";
-                System.out.println(tuple);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (resultat != null) {
-                    resultat.close();
-                }
-                if (statement != null) {
-                    statement.close();
-                }
-                if (connexion != null) {
-                    connexion.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
 
-            }
-        }
-
-    }
     
     public void genericRequestComplete(String selectQuery) {
         loadDatabase();

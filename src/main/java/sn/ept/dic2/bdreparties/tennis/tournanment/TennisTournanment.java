@@ -5,6 +5,8 @@
 
 package sn.ept.dic2.bdreparties.tennis.tournanment;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author ASUS
@@ -29,23 +31,44 @@ public class TennisTournanment {
         
         String selectQuery = "SELECT * from Joueur WHERE AnNaiss = 1972";
         
-        //joueur.genericRequest(selectQuery);
+        //Generic generic = new Generic();
         
-        System.out.println("******3.3 Compléter le programme pour afficher en en-tête le nom des attributs du résultat*******\n");
+        //generic.genericRequest(selectQuery);
+        
+        System.out.println("******3.3 Completer le programme pour afficher en en-tete le nom des attributs du resultat*******\n");
         
         String selectQueryComplete = "SELECT * from Joueur WHERE AnNaiss = 1972";
         
-        joueur.genericRequestComplete(selectQueryComplete);
+        //joueur.genericRequestComplete(selectQueryComplete);
         
         System.out.println("*******************4° Schema d'une relation ***********************\n \n");
 
-        Schema schema1 = new Schema();
+        //Schema schema1 = new Schema();
         
-        schema1.displaySchema();
+        //schema1.displaySchema();
         
         System.out.println("*******************5° Jointure Inter-bases ***********************\n \n");
 
-       
+        String selectQueryGeneric = "SELECT * from SPONSOR";
+        Generic2 generic2 = new Generic2();
+        
+        // This fonction allow me to add 100000 inside my database
+        //generic2.addToDb();
+        
+        try {
+            long start = System.currentTimeMillis();
+            
+            generic2.genericRequest(selectQueryGeneric);
+            
+            long end = System.currentTimeMillis();
+            
+            long timeExe = end - start;
+            
+            System.out.println("Le temps d'execution de la requete est: "+timeExe);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
 
     }
         
