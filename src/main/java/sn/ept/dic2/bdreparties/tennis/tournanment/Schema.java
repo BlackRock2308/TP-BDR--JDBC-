@@ -19,7 +19,7 @@ import static sn.ept.dic2.bdreparties.tennis.tournanment.Joueur.user;
 
 /**
  *
- * @author ASUS
+ * @author Mbaye SENE
  */
 public class Schema {
 

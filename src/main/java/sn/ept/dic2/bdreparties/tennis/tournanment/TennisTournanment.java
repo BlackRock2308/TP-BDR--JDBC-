@@ -5,11 +5,9 @@
 
 package sn.ept.dic2.bdreparties.tennis.tournanment;
 
-import java.sql.SQLException;
-
 /**
  *
- * @author ASUS
+ * @author Mbaye SENE
  */
 public class TennisTournanment {
 
@@ -21,31 +19,31 @@ public class TennisTournanment {
         
         System.out.println("*******************2.1 Fonction maxPrime***********************\n \n");
         
-        //joueur.maxPrime();
+        joueur.maxPrime();
         
-        //System.out.println("*******************2.2 Fonction maxPrime2***********************/n");
+        System.out.println("*******************2.2 Fonction maxPrime2***********************/n");
         
-        //joueur.maxPrime2();
+        joueur.maxPrime2();
         
         System.out.println("*******************3.2 Requete Generique***********************\n");
         
         String selectQuery = "SELECT * from Joueur WHERE AnNaiss = 1972";
         
-        //Generic generic = new Generic();
+        Generic generic = new Generic();
         
-        //generic.genericRequest(selectQuery);
+        generic.genericRequest(selectQuery);
         
         System.out.println("******3.3 Completer le programme pour afficher en en-tete le nom des attributs du resultat*******\n");
         
         String selectQueryComplete = "SELECT * from Joueur WHERE AnNaiss = 1972";
         
-        //joueur.genericRequestComplete(selectQueryComplete);
+        joueur.genericRequestComplete(selectQueryComplete);
         
         System.out.println("*******************4° Schema d'une relation ***********************\n \n");
 
-        //Schema schema1 = new Schema();
+        Schema schema1 = new Schema();
         
-        //schema1.displaySchema();
+        schema1.displaySchema();
         
         System.out.println("*******************5° Jointure Inter-bases ***********************\n \n");
 
@@ -68,8 +66,6 @@ public class TennisTournanment {
         }catch(Exception e){
             e.printStackTrace();
         }
-        
-
     }
         
 }

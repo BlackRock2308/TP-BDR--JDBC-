@@ -18,7 +18,7 @@ import static sn.ept.dic2.bdreparties.tennis.tournanment.Joueur.user2;
 
 /**
  *
- * @author ASUS
+ * @author Mbaye SENE
  */
 public class Generic2 {
 
@@ -65,7 +65,6 @@ public class Generic2 {
 
             }
         }
-
     }
 
     public Connection connect() {
@@ -83,7 +82,6 @@ public class Generic2 {
     //fonction pour ajouter 100000 tuples dans ma base de données postgres
     public void addToDb() {
 
-        //String request1 = "SELECT ANNEE, MAX(PRIME) AS max_items FROM Gain WHERE annee = '" + year + "' ";
         loadDatabase();
 
         try {
@@ -114,10 +112,8 @@ public class Generic2 {
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-
             }
         }
-
     }
 
     private void loadDatabase() {

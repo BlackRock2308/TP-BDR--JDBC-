@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author ASUS
+ * @author Mbaye SENE
  */
 public class Joueur {
 
